@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(180deg, rgb(227, 255, 248, 0) 82.08%, rgb(227, 255, 248, 0.38) 100%);
+  /*Custei a descobrir que o grau estava errado. Estava 90 e era 180deg... Foi pegadinha essa heim..kkkk*/
+  min-height: 100vh;
+}
+
+.page {
+  width: 1000px;
+  /*largura estava errada*/
+  margin: 0 auto;
+  padding-top: 65px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  /*atribuição estava errada*/
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 48px;
+}
+
+a {
+  color: #1f1534;
+  text-decoration: none;
+}
+
+ul li a {
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+
+/*Fiquei incomodado com o menu.
+Quando passamos o cursor sobre a opção "Sobre ou "Treinar", o menu inteiro parece que se modifica.
+Isso ocorre porque a letra fica em negrito e ocupa mais espaço (mesmo que seja mínimo), fazendo com que 
+o espaço entre os links seja recalculado.
+Por essa razão, fiz uma troca, segue:*/
+ul li a:hover {
+  /*font-weight: bold;*/ /*A fonte não ficará mais como negrito, e sim trocará de cor.*/
+  color: #89c5cc;
+  opacity: 1;
+}
+
+/*Faltou a disposição da tag main*/
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1,
+ul {
+  font-family: "Mulish", sans-serif;
+}
+
+
+h1 {
+  font-size: 49px;
+  line-height: 56px;
+  color: #1f1534;
+  font-weight: normal;
+  width: 490px;
+}
+
+h1 span {
+  color: #89c5cc;
+  font-weight: bold;
+}
+
+section p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #7d7987;
+  margin: 40px 0;
+}
+
+button {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase; /*Em maíusculo realmente ficou melhor. Estava faltando essa instrução*/
+  background: #69B99D;
+  border: 0;
+  padding: 14px 32px 15px; /*padding tbm estava errado*/
+  display: flex;
+  justify-content: center; /*Deve ser centralizado pra ficar bonitinho..hehee*/
+  align-items: center; /*faltou o alinhamento dos elementos*/
+  gap: 10px; /*gap é de 10 px, não de 50px*/
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4EA788;
+}
+
+footer {
+  font-size: 14px;
+  line-height: 28px;
+
+  text-align: center;
+
+  margin-top: 80px;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+#balls {
+  position: fixed; /*faltou fixar a posição da imagem*/
+  bottom: 0;
+  right: 0;
+}
+
+/*Acrescentei também por conta própria..rsrs*/
+footer a:hover{
+  color: #89c5cc;
+}
